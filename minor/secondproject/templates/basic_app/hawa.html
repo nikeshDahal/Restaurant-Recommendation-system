@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form method="post" class="post-form" action="/rest/">
+      {% csrf_token %}
+                                        
+        <input class="form-control mr-sm-2" type="text" placeholder="Enter food items" aria-label="Search">
+        {{ form.title }}
+        <button type="submit" class="btn btn-success" style="border-radius: 10px;">Search</button>
+     </form>
+  </body>
+</html>

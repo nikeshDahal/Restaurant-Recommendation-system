@@ -1,0 +1,64 @@
+    id       city              title       location  index        combined_features
+0   21  Kathmandu             Syanko     Shankhamul     14     Shankhamul Kathmandu
+1   22  Kathmandu             Syanko    Shinamangal     15    Shinamangal Kathmandu
+2   23  Bhaktapur             Syanko      Pepsicola     16      Pepsicola Bhaktapur
+3   24  Kathmandu             Syanko       Bagbazar     17       Bagbazar Kathmandu
+4   25  Kathmandu             Syanko         Thamel     18         Thamel Kathmandu
+5   26  Kathmandu             Syanko  Budalinkantha     19  Budalinkantha Kathmandu
+6   27  Kathmandu             Syanko        Tinkune     20        Tinkune Kathmandu
+7   28     Banepa             Syanko         Banepa     21            Banepa Banepa
+8   29  Bhaktapur             Syanko   Suryabinayak     22   Suryabinayak Bhaktapur
+9   30   Lalitpur             Syanko     Jawalakhel     23      Jawalakhel Lalitpur
+10  31  Kathmandu       Burger House     Shankhamul     24     Shankhamul Kathmandu
+11  32  Kathmandu       Burger House        Tinkune     25        Tinkune Kathmandu
+12  33  Bhaktapur       Burger House      Gathaghar     26      Gathaghar Bhaktapur
+13  34  Bhaktapur       Burger House          Thimi     27          Thimi Bhaktapur
+14  35  Kathmandu       Burger House       Swayambu     28       Swayambu Kathmandu
+15  36  Kathmandu       Burger House    Shinamangal     29    Shinamangal Kathmandu
+16  37  Kathmandu       Burger House         Boudha     30         Boudha Kathmandu
+17  38  Kathmandu       Burger House      Kuleshwor     31      Kuleshwor Kathmandu
+18  39  Kathmandu    Chicken Station      Baneshwor     32      Baneshwor Kathmandu
+19  40  Bhaktapur    Chicken Station      Pepsicola     33      Pepsicola Bhaktapur
+20  41  Bhaktapur    Chicken Station          Thimi     34          Thimi Bhaktapur
+21  42   Lalitpur    Chicken Station     Jhamsikhel     35      Jhamsikhel Lalitpur
+22  43  Kathmandu    Chicken Station    Shinamangal     36    Shinamangal Kathmandu
+23  44  Kathmandu    Chicken Station         Thamel     37         Thamel Kathmandu
+24  45  Kathmandu         Pepe Pizza         Balaju     38         Balaju Kathmandu
+25  46  Bhaktapur         Pepe Pizza          Thimi     39          Thimi Bhaktapur
+26  47  Kathmandu         Pepe Pizza    Bhatbhatini     40    Bhatbhatini Kathmandu
+27  48  Kathmandu         Pepe Pizza         Boudha     41         Boudha Kathmandu
+28  49   Lalitpur               KKFC     Kumaripati     42      Kumaripati Lalitpur
+29  50  Kathmandu               KKFC      Maitidevi     43      Maitidevi Kathmandu
+30  51  Kathmandu               KKFC  Khichapokhari     44  Khichapokhari Kathmandu
+31  52  Kathmandu                KFC     Durbarmarg     45     Durbarmarg Kathmandu
+32  53   Lalitpur                KFC       Pulchowk     46        Pulchowk Lalitpur
+33  54  Bhaktapur                KFC          Thimi     47          Thimi Bhaktapur
+34  55  Kathmandu                KFC         Boudha     48         Boudha Kathmandu
+35  56  Bhaktapur          Pizza Hut          Thimi     49          Thimi Bhaktapur
+36  57   Lalitpur          Pizza Hut     Thapathali     50      Thapathali Lalitpur
+37  58  Kathmandu          Pizza Hut     Durbarmarg     51     Durbarmarg Kathmandu
+38  59   Lalitpur                KFC     Thapathali     52      Thapathali Lalitpur
+39  60   Lalitpur     Cafe Cofee Day     Kumaripati     53      Kumaripati Lalitpur
+40  61  Kathmandu  Gossip Cafe & Bar     Durbarmarg     54     Durbarmarg Kathmandu
+41  62   Lalitpur          Sams Deli     Jhamsikhel     55      Jhamsikhel Lalitpur
+42  63   Lalitpur          Mr Gimbab     Jhamsikhel     56      Jhamsikhel Lalitpur
+43  64  Kathmandu             Picnic         Thamel     57         Thamel Kathmandu
+44  65  Kathmandu     Hankook Sarang         Thamel     58         Thamel Kathmandu
+45  66  Kathmandu    Chicken Station          Naxal     59          Naxal Kathmandu
+46  67  Kathmandu    Chicken Station      Sitapaila     60      Sitapaila Kathmandu
+47  68  Kathmandu    Chicken Station    Chhetrapati     61    Chhetrapati Kathmandu
+48  69  Kathmandu    Chicken Station       Sundhara     62       Sundhara Kathmandu
+49   0  Kathmandu       Burger House  New Baneshwor      1  New Baneshwor Kathmandu
+50   1   Lalitpur             Syanko      Kupondole     13       Kupondole Lalitpur
+51   2  Kathmandu       Burger House     Koteshowor      2     Koteshowor Kathmandu
+52   3  Kathmandu       Local Sekuwa  Old Baneshwor      3  Old Baneshwor Kathmandu
+53   4   Lalitpur         Bota Mo:Mo     Jhamsikhel     63      Jhamsikhel Lalitpur
+54   6  Kathmandu      Sekuwa Corner     BabarMahal      4     BabarMahal Kathmandu
+55   8   Lalitpur         Pepe Pizza      Satdobato      5       Satdobato Lalitpur
+56  10  Kathmandu         Pepe Pizza      AnamNagar      6      AnamNagar Kathmandu
+57  14   Lalitpur        Pizza World     Kumaripati      7      Kumaripati Lalitpur
+58  15   Lalitpur        Bake N Bite     Kumaripati      8      Kumaripati Lalitpur
+59  16   Kirtipur               Sasa       Kirtipur      9        Kirtipur Kirtipur
+60  18  Kathmandu              KKFC   Old Baneshwor     10  Old Baneshwor Kathmandu
+61  19   Kirtipur        Newa Lahana       Kirtipur     11        Kirtipur Kirtipur
+62  20   Kathmadu             Syanko      Koteshwor     12       Koteshwor Kathmadu

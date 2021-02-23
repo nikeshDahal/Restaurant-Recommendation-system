@@ -1,0 +1,434 @@
+<!doctype html>
+{%load static%}
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Restaurant Recommendation System</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css'%}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/themify-icons.css'%}">
+    <link rel="stylesheet" href="{% static 'css/nice-select.css'%}">
+    <link rel="stylesheet" href="{% static 'css/flaticon.css'%}">
+    
+    <link rel="stylesheet" href="{% static 'css/animate.css'%}">
+    <link rel="stylesheet" href="{% static 'css/slicknav.css'%}">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+
+<body>
+ 
+    <header>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid p-0">
+                    <div class="row align-items-center no-gutters">
+                        <div class="col-xl-5 col-lg-5">
+                            <div class="main-menu  d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a class="active" href="{% url 'basic_app:index' %}">Home</a></li>
+                                        <li><a href="{% url 'basic_app:resturantList' %}">Restaurant list</a></li>
+                                        <li><a href="{% url 'basic_app:about' %}">About</a></li>
+                                        <li><a href="{% url 'basic_app:contact' %}">Contact</a></li>
+                                        <li><a href="{% url 'basic_app:login' %}">Login</a></li>
+                                       
+                                            <!-- ............. -->
+                                            
+
+
+
+
+
+
+
+
+
+                                            
+                                          
+                                            <!-- .......... -->
+                                          </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-2">
+                        </div>
+                        <div class="col-xl-5 col-lg-5 d-none d-lg-block">
+                            <div class="book_room">
+                                <div class="socail_links">
+                                    <ul>
+                                        <li>
+                                            <a href="https://www.instagram.com/nikesh_dahal/">
+                                                <i class="fa fa-instagram"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://twitter.com/Nikeshd12078785">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.facebook.com/nikesh.dahal.754">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.google.com/">
+                                                <i class="fa fa-google-plus"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="book_btn d-none d-xl-block">
+                                    <a class="#" href="tel:+977 9814037042">+977 9814037042</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+
+    <!-- slider_area_start -->
+    <div class="slider_area">
+    
+            <div class="single_slider  d-flex align-items-center slider_bg_2 overlay">
+                <div class="container">
+                    <div class="row align-items-center justify-content-center">
+                        <!-- <div class="col-xl-9 col-md-9 col-md-12"> -->
+                            <div class="slider_text text-center">
+                                <!-- <div class="row"> -->
+                                <h4 style="font-size: 40px;color: white;">Restaurant Recommendation System</h4>
+                                <hr style="  border:3px solid white;border-radius: 5px;">
+                                <div class="row">
+                                    <div class="col-sm-3"></div>
+                                    <div class="col-sm-6">
+                                       <form method="get" class="post-form" action="/rest/">
+                                        <!-- {% csrf_token %} -->
+                                        
+                                          <!-- <input class="form-control mr-sm-2" type="text" placeholder="Enter food items" aria-label="Search"> -->
+                                            {{ form.title }}
+                                          <button type="submit" class="btn btn-success" style="border-radius: 10px;">Search</button>
+                                       </form>
+                                    </div>
+                                    <div class="col-sm-3"></div>
+                                </div>
+                            </div>
+                        <!-- </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- slider_area_end -->
+
+    <!-- .............rated restaurants areaa........... -->
+<!--  <div class="best_restaurants_area">
+        <div class="container"> -->
+    <div class="row">
+        <div class="col-lg-12">
+             <div class="section_title text-center mb-80">
+                <span>Restaurant lists</span>
+                    <hr style="  border:3px solid yellow;border-radius: 5px;">
+                    <h3>Best Rated Restaurants</h3>
+                    <hr style="  border:3px solid black;border-radius: 5px;">
+            </div>
+        </div>
+    </div>
+<!-- </div>
+</div> -->
+
+
+            
+<br>    <!-- ------------------ENDING OF ONE ROW RESTURANT LISTS------------------------ -->
+        <div class="row"><br>
+            
+            <div class="col-xl-4">
+                <div class="card" style="width: 18rem;"><br>
+                   <img  src="{% static 'css/img/restaurants/1.jpg' %}" style="height:200px" alt="photo">
+                  <div class="card-body">
+                    <a href=""><h3>Syanko</h3></a>
+                    
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half"></i>
+                    </div>
+                  </div>
+                </div>
+            </div>
+       
+
+
+    <div class="row"><br>
+            
+        <div class="col-xl-4">
+            <div class="card" style="width: 18rem;"><br>
+               <img  src="{% static 'css/img/restaurants/1.jpg' %}" style="height:200px" alt="photo">
+              <div class="card-body">
+                <a href=""><h3>Syanko</h3></a>
+                
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half"></i>
+                </div>
+              </div>
+            </div>
+        </div>
+        
+    </div> 
+</div>
+    
+<!-- -----------------------------------------------ENDING OF 2nd ROW OF RESTURANT LISTS------------------------- -->
+<br><br><br>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="iteam_links">
+                    <center><a class="boxed-btn5 " style="background-color:green" href="resturantList.html">More Restaurants</a></center>
+                </div>
+            </div>
+        </div>
+    
+
+
+<!-- ------------------ENDING OF MAIN RESTURANT AREA------------------------- -->
+
+
+
+<!-- testimonial_area_start  -->
+    <div class="testimonial_area ">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="section_title mb-60 text-center">
+                        <span>Testimonials</span>
+                        <h3>Happy Customers</h3>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="testmonial_active owl-carousel">
+                        <div class="single_carousel">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <div class="single_testmonial text-center">
+                                        <p>“hey i am using this site,i like it very much , it is much familiar with us and nothing is too complex to use it , it is best restaurant recommendation system developed by <i class="fa fa-heart-o" aria-hidden="true"></i> Team Corona</p>
+                                        <div class="testmonial_author">
+                                            <div class="image-cropper">
+                                                <img src="{% static 'css/img/testmonial/2.jpg' %}" class="img-circle" alt="photo"> 
+                                            </div>
+                                            <h4>Nikesh Dahal</h4>
+                                            <div class="stars">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star-half"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="single_carousel">
+                            <div class="row justify-content-center">
+                                <!-- <div class="col-lg-8"> -->
+                                    <div class="single_testmonial text-center">
+                                        <p>“hey i am using this site,i like it very much , it is much familiar with us and nothing is too complex to use it , it is best restaurant recommendation system developed by <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Team Corona</a></p>
+                                    </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xl-4"></div>
+                                <div class="col-xl-4">
+                                        <div class="testmonial_author">  
+                                            <div class="image-cropper">
+                                                <img src="{% static 'css/img/testmonial/1.jpg' %}" class="img-circle" alt="photo"> 
+                                            </div>
+                                            <h4>Jenisha khaiguli</h4>
+                                            <div class="stars">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star-half"></i>
+                                                <i class="fa fa-star-half"></i>
+                                                <i class="fa fa-star-half"></i>
+                                            </div>
+                                        </div>
+                                </div>
+                                <div class="col-xl-4"></div>
+                            </div>
+                            <!-- </div> -->
+                        </div>
+                        
+                        <div class="single_carousel">
+                            <div class="row justify-content-center">
+                                <!-- <div class="col-lg-8"> -->
+                                    <div class="single_testmonial text-center">
+                                        <p>“hey i am using this site,i like it very much , it is much familiar with us and nothing is too complex to use it , it is best restaurant recommendation system developed by <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Team Corona</a></p>
+                                    </div>
+                            </div>
+
+                            <div class="row justify-content-center">
+                                <div class="col-lg-4"></div>
+                                <div class="col-lg-4 justify-content-center">
+                                        <div class="testmonial_author">  
+                                            <div class="image-cropper">
+                                                <img src="{% static 'css/img/testmonial/3.jpg' %}" class="img-circle" alt="photo"> 
+                                            </div>
+                                            <h4>Isha Bhatt</h4>
+                                            <div class="stars">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star-half"></i>
+                                                <i class="fa fa-star-half"></i>
+                                                <i class="fa fa-star-half"></i>
+                                            </div>
+                                        </div>
+                                </div>
+                                <div class="col-lg-4"></div>
+                            </div>
+                            <!-- </div> -->
+                        </div>
+                        </div>
+                    </div>
+                </div>
+           </div>
+       </div>
+    </div>
+
+    <!-- ...............footer............ -->
+<footer class="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-md-6 col-lg-4">
+                        <div class="footer_widget text-center ">
+                            <h3 class="footer_title pos_margin">
+                                    Dhapakhel
+                            </h3>
+                            <p>Kathmandu,Bagmati<br> NEPAL <br> 
+                                    <a href="https://www.facebook.com/nikesh.dahal.754">Nikesh Dahal</a></p>
+                            <a class="number" href="#">+9779814037042</a>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 col-lg-4">
+                        <div class="footer_widget text-center ">
+                            <h3 class="footer_title pos_margin">
+                                koteshwor
+                            </h3>
+                            <p>Kathmandu,Bagmati<br> NEPAL <br> 
+                                    <a href="https://www.facebook.com/nikesh.dahal.754">Nikesh Dahal</a></p>
+                            <a class="number" href="#">+9779814037042</a>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-12 col-lg-4">
+                            <div class="footer_widget">
+                                    <h3 class="footer_title">
+                                            Stay Connected
+                                    </h3>
+                                    <form action="#" class="newsletter_form">
+                                        <input type="text" placeholder="Enter your mail">
+                                        <button type="submit">Sign Up</button>
+                                    </form>
+                                    <p class="newsletter_text">Stay connect with us to get exclusive offer!</p>
+                                </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-4">
+                        <div class="socail_links text-center">
+                                <ul>
+                                    <li>
+                                        <a href=https://www.instagram.com/nikesh_dahal/">
+                                            <i class="ti-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href=https://twitter.com/Nikeshd12078785>
+                                            <i class="ti-twitter-alt"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.facebook.com/nikesh.dahal.754">
+                                            <i class="ti-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.google.com">
+                                            <i class="fa fa-google-plus"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy-right_text">
+            <div class="container">
+                <div class="footer_border"></div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <p class="copy_right text-center">
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;2020 All rights reserved | Developed <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Team Corona</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+<!-- JS here -->
+<script src="{% static 'js/vendor/modernizr-3.5.0.min.js'%}"></script>
+<script src="{% static 'js/vendor/jquery-1.12.4.min.js'%}"></script>
+<script src="{% static 'js/popper.min.js'%}"></script>
+<script src="{% static 'js/bootstrap.min.js'%}"></script>
+<script src="{% static 'js/owl.carousel.min.js'%}"></script>
+<script src="{% static 'js/isotope.pkgd.min.js'%}"></script>
+<script src="{% static 'js/ajax-form.js'%}"></script>
+<script src="{% static 'js/waypoints.min.js'%}"></script>
+<script src="{% static 'js/jquery.counterup.min.js'%}"></script>
+<script src="{% static 'js/imagesloaded.pkgd.min.js'%}"></script>
+<script src="{% static 'js/scrollIt.js'%}"></script>
+<script src="{% static 'js/jquery.scrollUp.min.js'%}"></script>
+<script src="{% static 'js/wow.min.js'%}"></script>
+<script src="{% static 'js/nice-select.min.js'%}"></script>
+<script src="{% static 'js/jquery.slicknav.min.js'%}"></script>
+<script src="{% static 'js/jquery.magnific-popup.min.js'%}"></script>
+<script src="{% static 'js/plugins.js'%}"></script>
+
+<!--contact js-->
+<script src="js/contact.js"></script>
+<script src="js/jquery.ajaxchimp.min.js"></script>
+<script src="js/jquery.form.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/mail-script.js"></script>
+
+<script src="js/main.js"></script>
+
+</body>
+
+</html>
