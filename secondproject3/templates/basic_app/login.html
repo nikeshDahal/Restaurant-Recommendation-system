@@ -1,0 +1,110 @@
+<!doctype html>
+{%load static%}
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Login</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+
+
+    <link rel="stylesheet" href="{%static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{%static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{%static 'css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{%static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{%static 'css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{%static 'css/nice-select.css' %}">
+    <link rel="stylesheet" href="{%static 'css/flaticon.css' %}">
+    <link rel="stylesheet" href="{%static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{%static 'css/slicknav.css' %}">
+    <link rel="stylesheet" href="{%static 'css/style.css' %}">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+
+
+
+
+<body>
+     <header>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid p-0">
+                    <div class="row align-items-center no-gutters">
+                        <div class="col-xl-5 col-lg-5">
+                            <div class="main-menu  d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a class="active" href="{% url 'basic_app:index' %}">Home</a></li>
+                                        <li><a href="{% url 'basic_app:resturantList' %}">Restaurant list</a></li>
+                                        <li><a href="{% url 'basic_app:about' %}">About</a></li>
+                                        <li><a href="{% url 'basic_app:contact' %}">Contact</a></li>
+                                        <li><a href="{% url 'basic_app:login' %}">Login</a></li>
+
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-2">
+                        </div>
+                        <div class="col-xl-5 col-lg-5 d-none d-lg-block">
+                            <div class="book_room">
+                                <div class="socail_links">
+                                    <ul>
+                                        <li>
+                                            <a href="https://www.instagram.com/nikesh_dahal/">
+                                                <i class="fa fa-instagram"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://twitter.com/Nikeshd12078785">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.facebook.com/nikesh.dahal.754">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.google.com/">
+                                                <i class="fa fa-google-plus"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="book_btn d-none d-xl-block">
+                                    <a class="#" href="tel:+977 9814037042">+977 9814037042</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+
+
+
+
+   <div class="loginbox">
+   	<img src="{%static 'css/img/loginsignup/images.png' %}" class="images">
+   <marquee> <h1>Please login</h1></marquee>
+<form>
+	<p> Username</p>
+	<input type="text" name=""placeholder="Enter Username">
+	<p>Password</p>
+	<input type="password" name=""placeholder="Enter Password">
+	<br><br><input type="submit" name=""value="Login"><br>
+	<br><a href="#">Lost your password?</a><br>
+	<a href="signup.html">Don't have account?</a>
+</form>
+
+
+   </div>
+</body>
+</head>
+</html>
