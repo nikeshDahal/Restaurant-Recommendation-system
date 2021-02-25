@@ -14,4 +14,5 @@ urlpatterns= [
     url(r'^Menu/',views.Menu,name='Menu'),
     url(r'^signup/',views.signup,name='signup'),
     url(r'^singleblog/',views.singleblog,name='singleblog'),
+    # url(r'^nodata/',views.nodata,name='nodata'),
 ]

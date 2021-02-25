@@ -28,6 +28,7 @@ urlpatterns = [
     url(r'^$',views.index,name='index'),
     path('rest/', views.show),
     path('show/', views.show),
+    path('nodata/',views.show),
     path('admin/',admin.site.urls),
     url(r'^basic_app/',include('basic_app.urls')),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
