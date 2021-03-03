@@ -109,8 +109,8 @@ global is_res_present
 def show(request):
     print('DEBUG')
     # restaurants = Restaurant.objects.all()
-    inp = request.GET.get('title')
-    inp2= request.GET.get('location')
+    inp = request.GET.get('title').lower()
+    inp2 = request.GET.get('location').lower()
     from pprint import pprint
     # pprint(vars(restaurants[0]))
     # filtered = pd.DataFrame.from_records(restaurants)
@@ -188,22 +188,22 @@ def show(request):
 
         # Step 5: Compute the Cosine Similarity based on the count_matrix
         cosine_sim = cosine_similarity(count_matrix)
-        movie_user_likes = inp
-        location_user_likes = inp2
+        restaurants_user_types = inp
+        location_user_types = inp2
         # movie_user_likes
 
         # Step 6: Get index of this movie from its title
-        movie_index = get_index_from_title(movie_user_likes,location_user_likes)
+        restaurants_index = get_index_from_title(restaurants_user_types,location_user_types)
         # print("Printing movie index")
         # print(movie_index)
 
-        similar_movies = list(enumerate(cosine_sim[int(movie_index)]))
+        similar_restaurants = list(enumerate(cosine_sim[int(restaurants_index)]))
         # print("Printing Similar Movies")
         # print(similar_movies)
 
         # Step 7: Get a list of similar movies in descending order of similarity score
-        sorted_similar_movies = sorted(
-            similar_movies, key=lambda x: x[1], reverse=True)
+        sorted_similar_restaurants = sorted(
+            similar_restaurants, key=lambda x: x[1], reverse=True)
 
         # print("Printing Sorted_Similar movies")
         # print(sorted_similar_movies)
@@ -213,14 +213,13 @@ def show(request):
         restaurants_list = []
         restaurants_loc = []
 
-        for element in sorted_similar_movies:
+        for element in sorted_similar_restaurants:
             # print(get_title_from_index(element[0]))
-            res_val=get_title_from_index(element[0])
-            res_loc=get_location_from_index(element[0])
+            res_val = get_title_from_index(element[0]).title()
+            res_loc = get_location_from_index(element[0]).title()
             # print(res_val)
             restaurants_list.append(res_val)
             restaurants_loc.append(res_loc)
-            # restaurants = get_title_from_index(element[0])
 
             i = i + 1
             if i > 6:
