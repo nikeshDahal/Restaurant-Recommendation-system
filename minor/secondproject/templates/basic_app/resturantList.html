@@ -130,32 +130,221 @@
            </div>
 
 <!-- ----------------------------STARTING OF RESTURANT LISTS-------------------------------------- -->
+<!--&lt;!&ndash;   <div class="best_restaurants_area">-->
+<!--       <div class="container"> &ndash;&gt;-->
+<!--           <div class="row"><br>-->
+<!--            {% for restaurantName in restaurants %}-->
+
+<!--                <div class="col-xl-4">-->
+<!--                   <div class="card" style="width: 18rem;"><br>-->
+<!--                      <img  src="{% static 'css/img/restaurants/1.jpg' %} " style="height:200px" alt="photo">-->
+<!--                     <div class="card-body">-->
+<!--                      <a href=""><h3>{{ restaurantName.0 }}</h3></a>-->
+<!--                         {% for restaurant in restaurants1 %}-->
+
+<!--                        <p>{{restaurant.0}}</p>-->
+<!--                          {% endfor %}-->
+
+<!--                       <div class="info">-->
+<!--                           <fieldset class="rating">-->
+<!--                                   <legend>Please rate:</legend>-->
+<!--                                   <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>-->
+<!--                                   <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>-->
+<!--                                   <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>-->
+<!--                                   <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>-->
+<!--                                   <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>-->
+<!--                           </fieldset>-->
+<!--                       </div>-->
+<!--                     </div>-->
+<!--                   </div>-->
+<!--               </div>-->
+<!--            {% endfor %}-->
+
+
+<!--               ###################################################################################-->
 <!--   <div class="best_restaurants_area">
-       <div class="container"> -->
-           <div class="row"><br>
-            {% for restaurantName in restaurants %}
+        <div class="container"> -->
+            <div class="row"><br>
+                {% for restaurantName in restaurants %}
+
                 <div class="col-xl-4">
                    <div class="card" style="width: 18rem;"><br>
                       <img  src="{% static 'css/img/restaurants/1.jpg' %} " style="height:200px" alt="photo">
                      <div class="card-body">
-                      <a href=""><h3>{{ restaurantName }}</h3></a>
-                       <!-- <p>location of restaurants.</p> -->
-                       <div class="info">
-                           <fieldset class="rating">
-                                   <legend>Please rate:</legend>
-                                   <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
-                                   <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
-                                   <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
-                                   <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
-                                   <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
-                           </fieldset> 
-                       </div>
-                     </div>
-                   </div>
-               </div> 
-            {% endfor %}
+                      <a href=""><h3>{{ restaurantName.0 }}</h3></a>
+                         {% for restaurant in restaurants1 %}
 
-            
+                        <p>{{restaurant.0}}</p>
+                         {% endfor %}
+                {% endfor %}
+<!--                        <div class="info">-->
+<!--                            <fieldset class="rating">-->
+<!--                                    <legend>Please rate:</legend>-->
+<!--                                    <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>-->
+<!--                                    <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>-->
+<!--                                    <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>-->
+<!--                                    <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>-->
+<!--                                    <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>-->
+<!--                            </fieldset>-->
+<!--                        </div>-->
+                      </div>
+                    </div>
+                </div>
+
+
+
+                 {% for restaurantName in restaurants %}
+
+                <div class="col-xl-4">
+                   <div class="card" style="width: 18rem;"><br>
+                      <img  src="{% static 'css/img/restaurants/1.jpg' %} " style="height:200px" alt="photo">
+                     <div class="card-body">
+                      <a href=""><h3>{{ restaurantName.1 }}</h3></a>
+                         {% for restaurant in restaurants1 %}
+
+                        <p>{{restaurant.1}}</p>
+                         {% endfor %}
+                {% endfor %}
+<!--                        <div class="info">-->
+<!--                               <fieldset class="rating">-->
+<!--                                    <legend>Please rate:</legend>-->
+<!--                                    <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>-->
+<!--                                    <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>-->
+<!--                                    <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>-->
+<!--                                    <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>-->
+<!--                                    <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>-->
+<!--                            </fieldset>-->
+<!--                        </div>-->
+                      </div>
+                    </div>
+                </div>
+
+                 {% for restaurantName in restaurants %}
+
+                <div class="col-xl-4">
+                   <div class="card" style="width: 18rem;"><br>
+                      <img  src="{% static 'css/img/restaurants/1.jpg' %} " style="height:200px" alt="photo">
+                     <div class="card-body">
+                      <a href=""><h3>{{ restaurantName.2 }}</h3></a>
+                         {% for restaurant in restaurants1 %}
+
+                        <p>{{restaurant.2}}</p>
+                         {% endfor %}
+                {% endfor %}
+<!--                         <div class="info">-->
+<!--                               <fieldset class="rating">-->
+<!--                                    <legend>Please rate:</legend>-->
+<!--                                    <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>-->
+<!--                                    <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>-->
+<!--                                    <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>-->
+<!--                                    <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>-->
+<!--                                    <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>-->
+<!--                            </fieldset>-->
+<!--                        </div>-->
+                      </div>
+                    </div>
+                </div>
+            </div><br>
+
+<!--           starting of 2 nd row list-->
+<!--   <div class="best_restaurants_area">
+        <div class="container"> -->
+            <div class="row"><br>
+                {% for restaurantName in restaurants %}
+
+                <div class="col-xl-4">
+                   <div class="card" style="width: 18rem;"><br>
+                      <img  src="{% static 'css/img/restaurants/1.jpg' %} " style="height:200px" alt="photo">
+                     <div class="card-body">
+                      <a href=""><h3>{{ restaurantName.3 }}</h3></a>
+                         {% for restaurant in restaurants1 %}
+
+                        <p>{{restaurant.3}}</p>
+                         {% endfor %}
+                {% endfor %}
+<!--                        <div class="info">-->
+<!--                            <fieldset class="rating">-->
+<!--                                    <legend>Please rate:</legend>-->
+<!--                                    <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>-->
+<!--                                    <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>-->
+<!--                                    <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>-->
+<!--                                    <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>-->
+<!--                                    <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>-->
+<!--                            </fieldset>-->
+<!--                        </div>-->
+                      </div>
+                    </div>
+                </div>
+
+
+
+                 {% for restaurantName in restaurants %}
+
+                <div class="col-xl-4">
+                   <div class="card" style="width: 18rem;"><br>
+                      <img  src="{% static 'css/img/restaurants/1.jpg' %} " style="height:200px" alt="photo">
+                     <div class="card-body">
+                      <a href=""><h3>{{ restaurantName.4 }}</h3></a>
+                         {% for restaurant in restaurants1 %}
+
+                        <p>{{restaurant.4}}</p>
+                         {% endfor %}
+                {% endfor %}
+<!--                        <div class="info">-->
+<!--                               <fieldset class="rating">-->
+<!--                                    <legend>Please rate:</legend>-->
+<!--                                    <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>-->
+<!--                                    <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>-->
+<!--                                    <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>-->
+<!--                                    <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>-->
+<!--                                    <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>-->
+<!--                            </fieldset>-->
+<!--                        </div>-->
+                      </div>
+                    </div>
+                </div>
+
+                 {% for restaurantName in restaurants %}
+
+                <div class="col-xl-4">
+                   <div class="card" style="width: 18rem;"><br>
+                      <img  src="{% static 'css/img/restaurants/1.jpg' %} " style="height:200px" alt="photo">
+                     <div class="card-body">
+                      <a href=""><h3>{{ restaurantName.5 }}</h3></a>
+                         {% for restaurant in restaurants1 %}
+
+                        <p>{{restaurant.5}}</p>
+                         {% endfor %}
+                {% endfor %}
+<!--                         <div class="info">-->
+<!--                               <fieldset class="rating">-->
+<!--                                    <legend>Please rate:</legend>-->
+<!--                                    <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>-->
+<!--                                    <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>-->
+<!--                                    <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>-->
+<!--                                    <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>-->
+<!--                                    <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>-->
+<!--                            </fieldset>-->
+<!--                        </div>-->
+                      </div>
+                    </div>
+                </div>
+            </div><br>
+
+
+
+
+
+
+
+<!--           ending of 2 nd row list-->
+
+
+
+
+
+
+
            <!-- ---------------------------------------ENDING OF 2nd ROWS OF RESTURANT LISTS------------------------------ -->
 
        </div>

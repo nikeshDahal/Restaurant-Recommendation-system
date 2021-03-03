@@ -102,27 +102,24 @@
 <body>
    <div class="signupbox">
    	
-    <marquee><h1>Signup For Free!!</h1></marquee>
-<form>
-	<p> Firstname</p>
-	<input type="text" name=""placeholder="Enter Firstname">
+    <h1>Signup For Free!!</h1></marquee>
+<form method="POST">
 
-	<p> Lastname</p>
-	<input type="text" name=""placeholder="Enter Lastname">
-
-	<p> Username</p>
-	<input type="text" name=""placeholder="Enter Username">
+	<p>username</p><br>
+     {{form.username}}
 
 
-	<p>Password</p>
-	<input type="password" name=""placeholder="Enter Password">
 
-	<p> Em@il Address</p>
-	<input type="text" name=""placeholder="Enter Email">
+    <p>Password</p><br>
+
+    {{form.pwd}}
+
 
 	<br><br><input type="submit" name=""value="Signup"><br>
+
+
 	
-	<a href="login.html">Already have account?</a>
+	<a href="{% url 'basic_app:login' %}">Already have account?</a>
 </form>
 
 

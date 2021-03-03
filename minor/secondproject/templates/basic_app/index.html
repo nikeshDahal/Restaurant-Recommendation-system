@@ -117,7 +117,10 @@
                                         <!-- {% csrf_token %} -->
                                         
                                           <!-- <input class="form-control mr-sm-2" type="text" placeholder="Enter food items" aria-label="Search"> -->
-                                            {{ form.title }}
+                                           <p>Enter restaurant name</p>
+                                            {{ form.title }}<br>
+                                           <p>Enter location </p>
+                                            {{form.location}}<br>
                                           <button type="submit" class="btn btn-success" style="border-radius: 10px;">Search</button>
                                        </form>
                                     </div>

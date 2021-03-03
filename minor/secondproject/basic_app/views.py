@@ -1,6 +1,9 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Restaurant
+from .models import userreg
 from .forms import RestaurantForm
+from django.contrib import messages
+from .forms import  loginForm
 from django.views.generic import ListView, DetailView
 from django.http import HttpResponse
 import pandas as pd
@@ -26,6 +29,21 @@ def index(request):
 
     return render(request, 'basic_app/index.html', {'form': form})
 
+def userregistration(request, saverecord=None):
+    if request.method == 'POST':
+        if request.POST.get('username') and request.POST.get('pwd'):
+            saverecord=userreg()
+            saverecord.username = request.POST.get('username')
+            saverecord.pwd = request.POST.get('pwd')
+            saverecord.save()
+            messages.success(request,"New user registered sucessfully")
+            return render(request,'basic_app/signup.html')
+    else:
+            return render(request,'basic_app/signup.html')
+
+
+
+
 
 def about(request):
     return render(request, 'basic_app/about.html')
@@ -44,6 +62,7 @@ def hawa(request):
 
 
 def login(request):
+
     return render(request, 'basic_app/login.html')
 
 
@@ -52,7 +71,18 @@ def Menu(request):
 
 
 def signup(request):
-    return render(request, 'basic_app/signup.html')
+    if request.method == 'POST':
+        form = RestaurantForm(request.POST)
+        if form.is_valid():
+            try:
+                form.save()
+                return redirect('/')
+            except:
+                pass
+    else:
+        form = loginForm()
+
+    return render(request, 'basic_app/signup.html', {'form': form})
 
 
 def singleblog(request):
@@ -80,6 +110,7 @@ def show(request):
     print('DEBUG')
     # restaurants = Restaurant.objects.all()
     inp = request.GET.get('title')
+    inp2= request.GET.get('location')
     from pprint import pprint
     # pprint(vars(restaurants[0]))
     # filtered = pd.DataFrame.from_records(restaurants)
@@ -99,10 +130,22 @@ def show(request):
             # print(df[df.index == index]["title"].values[0])
             return df[df.index == index]["title"].values[0]
 
-        def get_index_from_title(title):
-            # if df.size != 0:
-            #     print(df.head, "shape is")
-            return df[df.title == title]["index"].values[0]
+        def get_index_from_title(title,location):
+            a = df[df.title == title]["index"]
+            b= df[df.location == location]["index"]
+            cap=0
+            for af in a :
+                for bf in b:
+                    if (af == bf):
+                        cap=af
+            return cap
+
+        def get_location_from_index(index):
+                # print("Printing from get_titl e_from_index")
+                # print(df[df.index == index]["title"].values[0])
+            return df[df.index == index]["location"].values[0]
+
+
                 # return 2
 
             # else:
@@ -146,10 +189,11 @@ def show(request):
         # Step 5: Compute the Cosine Similarity based on the count_matrix
         cosine_sim = cosine_similarity(count_matrix)
         movie_user_likes = inp
+        location_user_likes = inp2
         # movie_user_likes
 
         # Step 6: Get index of this movie from its title
-        movie_index = get_index_from_title(movie_user_likes)
+        movie_index = get_index_from_title(movie_user_likes,location_user_likes)
         # print("Printing movie index")
         # print(movie_index)
 
@@ -167,26 +211,32 @@ def show(request):
         i = 0
         # a list to hold recommended restros
         restaurants_list = []
+        restaurants_loc = []
+
         for element in sorted_similar_movies:
             # print(get_title_from_index(element[0]))
             res_val=get_title_from_index(element[0])
+            res_loc=get_location_from_index(element[0])
             # print(res_val)
             restaurants_list.append(res_val)
+            restaurants_loc.append(res_loc)
             # restaurants = get_title_from_index(element[0])
 
             i = i + 1
-            if i > 5:
+            if i > 6:
                 break
-        # print("THis is ", restaurants)
-        # print("This is my recommendation", restaurants_list)
+          # print("THis is ", restaurants_list)
+        #  print("This is my recommendation", restaurants_list)
         # restaurant_list is passed as context named 'restaurants'
         if len(restaurants_list) > 0:
-            return render(request, "basic_app/resturantList.html", {'restaurants': restaurants_list})
+            return render(request, "basic_app/resturantList.html", {'restaurants': [restaurants_list],'restaurants1':[restaurants_loc]})
+
+
         else:
-            return render(request, "basic_app/index.html", )
+            return render(request, "basic_app/nodata.html", )
 
         # return render(request, "basic_app/nodata.html",)
 
     else:
-         return render(request, "basic_app/index.html", )
-        # return render(request, "basic_app/nodata.html", )
+         #return render(request, "basic_app/index.html", )
+         return render(request, "basic_app/nodata.html", )
